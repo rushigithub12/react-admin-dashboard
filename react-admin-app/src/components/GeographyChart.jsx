@@ -2,7 +2,7 @@ import React from "react";
 import { ResponsiveChoropleth } from "@nivo/geo";
 import { useTheme } from "@mui/material";
 import { tokens } from "../theme";
-import { mockGeographyData as data } from "../data/mockData";
+import { mockGeographyData as data } from "../data/mockdata";
 import { geoFeatures } from "../data/mockGeoFeatures";
 import useWindowSize from "../customHook/useWindowSize";
 
