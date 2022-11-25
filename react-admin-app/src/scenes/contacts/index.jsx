@@ -11,8 +11,8 @@ const Contacts = () => {
 
   const columns = [
     { field: "id", headerName: "ID", flex: 0.5 },
-    { field: "registrarId", headerName: "Registrar Id",  },
-    { field: "name", headerName: "Name", flex: 1, cellClassName: "name-column--cell" },
+    { field: "registrarId", headerName: "Registrar Id", minWidth: 50  },
+    { field: "name", headerName: "Name", flex: 1, cellClassName: "name-column--cell", minWidth: 150 },
     {
       field: "age",
       headerName: "Age",
@@ -20,10 +20,10 @@ const Contacts = () => {
       headerAlign: "left",
       align: "left",
     },
-    { field: "phone", headerName: "Phone Number", flex: 1 },
-    { field: "email", headerName: "Email", flex: 1 },
-    { field: "address", headerName: "Address", flex: 1 },
-    { field: "city", headerName: "City", flex: 1 },
+    { field: "phone", headerName: "Phone Number", flex: 1, minWidth: 150, },
+    { field: "email", headerName: "Email", flex: 1, minWidth: 150, },
+    { field: "address", headerName: "Address", flex: 1, minWidth: 150, },
+    { field: "city", headerName: "City", flex: 1, minWidth: 100, },
     { field: "zipCode", headerName: "ZipCode", flex: 1 }
   ];
 
@@ -55,7 +55,7 @@ const Contacts = () => {
             color: `${colors.grey[100]} !important`
         }
       }} >
-        <DataGrid rows={mockDataContacts} columns={columns} components={{ Toolbar: GridToolbar }} />
+        <DataGrid autoPageSize={true} rows={mockDataContacts} columns={columns} components={{ Toolbar: GridToolbar }} />
       </Box>
     </Box>
   );

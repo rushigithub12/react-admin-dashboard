@@ -16,9 +16,10 @@ const Invoices = () => {
       headerName: "Name",
       flex: 1,
       cellClassName: "name-column--cell",
+      minWidth: 150,
     },
-    { field: "phone", headerName: "Phone Number", flex: 1 },
-    { field: "email", headerName: "Email", flex: 1 },
+    { field: "phone", headerName: "Phone Number", flex: 1, minWidth: 150, },
+    { field: "email", headerName: "Email", flex: 1, minWidth: 150, },
     {
       field: "cost",
       headerName: "Cost",
@@ -30,7 +31,7 @@ const Invoices = () => {
         </Typography>
       ),
     },
-    { field: "date", headerName: "Date", flex: 1 },
+    { field: "date", headerName: "Date", flex: 1, minWidth: 100, },
   ];
 
   return (
@@ -65,7 +66,7 @@ const Invoices = () => {
           },
         }}
       >
-        <DataGrid checkboxSelection rows={mockDataInvoices} columns={columns} />
+        <DataGrid autoPageSize={true} checkboxSelection rows={mockDataInvoices} columns={columns} />
       </Box>
     </Box>
   );

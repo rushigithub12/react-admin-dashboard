@@ -26,11 +26,12 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
       active={selected === title}
       style={{
         color: colors.grey[100],
+        marginTop: 40
       }}
       onClick={() => setSelected(title)}
       icon={icon}
     >
-      <Typography>{title}</Typography>
+      <Typography sx={{ fontSize: 20 }} >{title}</Typography>
       <Link to={to} />
     </MenuItem>
   );
@@ -60,7 +61,7 @@ const Sidebar = () => {
         "& .pro-menu-item.active": {
           color: "#6870fa !important",
         },
-        height:"160vh"
+        height: { xs: "150vh", sm: "120vh" }
       }}
     >
       <ProSidebar collapsed={isCollapsed}>
@@ -126,9 +127,9 @@ const Sidebar = () => {
               setSelected={setSelected}
             />
             <Typography
-              variant="h6"
+              variant="h5"
               color={colors.grey[300]}
-              sx={{ m: "15px 0 5px 20px" }}
+              sx={{ m: "15px 0 5px 10px" }}
             >
               Data
             </Typography>
@@ -154,9 +155,9 @@ const Sidebar = () => {
               setSelected={setSelected}
             />
             <Typography
-              variant="h6"
+              variant="h5"
               color={colors.grey[300]}
-              sx={{ m: "15px 0 5px 20px" }}
+              sx={{ m: "15px 0 5px 10px" }}
             >
               Pages
             </Typography>
@@ -182,9 +183,9 @@ const Sidebar = () => {
               setSelected={setSelected}
             />
             <Typography
-              variant="h6"
+              variant="h5"
               color={colors.grey[300]}
-              sx={{ m: "15px 0 5px 20px" }}
+              sx={{ m: "15px 0 5px 10px" }}
             >
               Charts
             </Typography>

@@ -15,7 +15,7 @@ const Topbar = () => {
   const colorMode = useContext(ColorModeContext);
 
   return (
-    <Box sx={{ display: "flex", justifyContent: { xs: "space-evenly", lg: "space-between" } }} p={2}>
+    <Box sx={{ display: "flex", justifyContent: { xs: "space-evenly", sm: "space-between" } }} p={2}>
       <Box
         display="flex"
         backgroundColor={colors.primary[400]}

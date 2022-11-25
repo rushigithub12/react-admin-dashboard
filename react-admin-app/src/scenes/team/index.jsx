@@ -13,8 +13,8 @@ const Team = () => {
   const colors = tokens(theme.palette.mode);
 
   const columns = [
-    { field: "id", headerName: "ID" },
-    { field: "name", headerName: "Name", flex: 1, cellClassName: "name-column--cell" },
+    { field: "id", headerName: "ID", minWidth: 20, },
+    { field: "name", headerName: "Name", flex: 1, cellClassName: "name-column--cell", minWidth: 150 },
     {
       field: "age",
       headerName: "Age",
@@ -22,12 +22,13 @@ const Team = () => {
       headerAlign: "left",
       align: "left",
     },
-    { field: "phone", headerName: "Phone Number", flex: 1 },
-    { field: "email", headerName: "Email", flex: 1 },
+    { field: "phone", headerName: "Phone Number", flex: 1, minWidth: 150 },
+    { field: "email", headerName: "Email", flex: 1, minWidth: 150 },
     {
       field: "access",
       headerName: "Access Level",
       flex: 1,
+      minWidth: 150,
       renderCell: ({ row: { access } }) => {
         return <Box 
         width="60%"
@@ -78,9 +79,9 @@ const Team = () => {
         "& .MuiDataGrid-footerContainer": {
           borderTop: "none",
           backgroundColor: colors.blueAccent[700]
-        }
+        },
       }} >
-        <DataGrid rows={mockDataTeam} columns={columns} />
+        <DataGrid autoPageSize={true} rows={mockDataTeam} columns={columns} />
       </Box>
     </Box>
   );
