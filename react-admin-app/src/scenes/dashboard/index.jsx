@@ -251,6 +251,7 @@ const Dashboard = () => {
           gridColumn={{ xs: "span 6", sm: "span 4"}}
           gridRow={{ xs: "span 3", md: "span 2"}}
           backgroundColor={colors.primary[400]}
+          overflow="auto"
         >
           <Typography
             variant="h5"
@@ -259,7 +260,7 @@ const Dashboard = () => {
           >
             Sales Quantity
           </Typography>
-          <Box height="250px" mt="-20px" ml="50px">
+          <Box height="250px" mt="-20px" ml="20px">
             <BarChart isDashboard={true} />
           </Box>
         </Box>
@@ -267,7 +268,8 @@ const Dashboard = () => {
           gridColumn={{ xs: "span 6", sm: "span 4"}}
           gridRow={{ xs: "span 3", md: "span 2"}}
           backgroundColor={colors.primary[400]}
-          padding="30px"
+          padding="30px 10px"
+          overflow="auto"
         >
           <Typography
             variant="h5"
@@ -276,7 +278,7 @@ const Dashboard = () => {
           >
             Geography Based Traffic
           </Typography>
-          <Box height="200px">
+          <Box height="200px" >
             <GeographyChart isDashboard={true} />
           </Box>
         </Box>

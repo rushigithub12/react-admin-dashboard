@@ -35,7 +35,7 @@ const Form = () => {
     console.log(values);
   };
   return (
-    <Box m="20px">
+    <Box m="20px" maxHeight="100vh" overflow="auto" >
       <Header title="CREATE NEW USER" subtitle="Create a new User Profile" />
       <Formik
         onSubmit={handleFormSubmit}
