@@ -18,7 +18,7 @@ const Dashboard = () => {
   const colors = tokens(theme.palette.mode);
 
   return (
-    <Box m="20px" sx={{ maxHeight: "100vh", overflowY: { xs: "scroll", md: "" } }} >
+    <Box m="20px" sx={{ maxHeight: "100vh", overflowY: "auto" }} >
       {/* HEADER */}
       <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexDirection: { xs: "column", md: "row" } }}>
         <Header title="DASHBOARD" subtitle="Welcome to your dashboard" />
@@ -225,7 +225,7 @@ const Dashboard = () => {
           gridColumn={{ xs: "span 6", sm: "span 4"}}
           gridRow={{ xs: "span 3", md: "span 2"}}
           backgroundColor={colors.primary[400]}
-          p="30px"
+          p="10px 15px"
         >
           <Typography variant="h5" fontWeight="600">
             Campaign
@@ -259,7 +259,7 @@ const Dashboard = () => {
           >
             Sales Quantity
           </Typography>
-          <Box height="250px" mt="-20px">
+          <Box height="250px" mt="-20px" ml="50px">
             <BarChart isDashboard={true} />
           </Box>
         </Box>

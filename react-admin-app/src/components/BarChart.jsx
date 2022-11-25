@@ -2,10 +2,12 @@ import { useTheme } from "@mui/material";
 import { ResponsiveBar } from "@nivo/bar";
 import { tokens } from "../theme";
 import { mockBarData as data } from "../data/mockdata";
+import useWindowSize from "../customHook/useWindowSize";
 
 const BarChart = ({ isDashboard = false }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const size = useWindowSize();
 
   return (
     <ResponsiveBar
@@ -44,10 +46,8 @@ const BarChart = ({ isDashboard = false }) => {
       }}
       keys={["hot dog", "burger", "sandwich", "kebab", "fries", "donut"]}
       indexBy="country"
-      margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
+      margin={{ top: 50, right: 120, bottom: 50, left: 90 }}
       padding={0.3}
-      projectionScale={isDashboard || size.width <= 600 ? 100 : 150}
-      projectionTranslation={isDashboard || size.width <= 600 ? [0.5, 0.5] : [0.5, 0.5]}
       valueScale={{ type: "linear" }}
       indexScale={{ type: "band", round: true }}
       colors={{ scheme: "nivo" }}
