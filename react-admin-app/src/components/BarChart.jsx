@@ -46,6 +46,8 @@ const BarChart = ({ isDashboard = false }) => {
       indexBy="country"
       margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
       padding={0.3}
+      projectionScale={isDashboard || size.width <= 600 ? 100 : 150}
+      projectionTranslation={isDashboard || size.width <= 600 ? [0.5, 0.5] : [0.5, 0.5]}
       valueScale={{ type: "linear" }}
       indexScale={{ type: "band", round: true }}
       colors={{ scheme: "nivo" }}
@@ -98,7 +100,8 @@ const BarChart = ({ isDashboard = false }) => {
         from: "color",
         modifiers: [["darker", 1.6]],
       }}
-      legends={[
+      legends={ !isDashboard && size.width > 600
+        ?[
         {
           dataFrom: "keys",
           anchor: "bottom-right",
@@ -121,7 +124,7 @@ const BarChart = ({ isDashboard = false }) => {
             },
           ],
         },
-      ]}
+      ]: undefined}
       role="application"
       barAriaLabel={function (e) {
         return e.id + ": " + e.formattedValue + " in country: " + e.indexValue;
