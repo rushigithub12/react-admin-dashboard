@@ -30,7 +30,7 @@ function App() {
           <Sidebar />
           <main className="content">
             <Topbar />
-            <Routes basename="/react-admin-dashboard" >
+            <Routes>
               <Route path="/" element={<Dashboard />} />
               <Route path="/team" element={<Team />} />
               <Route path="/contacts" element={<Contacts />} />
