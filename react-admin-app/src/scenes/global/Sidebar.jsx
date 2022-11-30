@@ -61,7 +61,7 @@ const Sidebar = () => {
         "& .pro-menu-item.active": {
           color: "#6870fa !important",
         },
-        height: "120vh"
+        height: "115vh"
       }}
     >
       <ProSidebar collapsed={isCollapsed}>
