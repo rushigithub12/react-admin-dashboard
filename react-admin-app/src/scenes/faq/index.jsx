@@ -53,7 +53,7 @@ const FAQ = () => {
       {mockFaqData?.map((faq) => (
         <Accordion key={faq.id} defaultExpanded >
           <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-            <Typography color={colors.greenAccent[500]} variant="h5">
+            <Typography color={colors.orangeAccent[500]} variant="h5">
               {faq.summary}
             </Typography>
           </AccordionSummary>

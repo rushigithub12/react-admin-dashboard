@@ -139,7 +139,7 @@ const Form = () => {
               />
             </Box>
             <Box display="flex" justifyContent="end" mt="20px">
-              <Button type="submit" color="secondary" variant="contained">
+              <Button type="submit" color="warning" variant="contained">
                 Create new user
               </Button>
             </Box>

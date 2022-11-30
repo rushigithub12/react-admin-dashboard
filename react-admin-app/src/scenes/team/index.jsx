@@ -38,10 +38,10 @@ const Team = () => {
         justifyContent="center"
         backgroundColor={
           access ===  "admin" 
-          ? colors.greenAccent[600]
+          ? colors.orangeAccent[600]
           ? access === "manager"
-          : colors.greenAccent[700]
-          : colors.greenAccent[700]
+          : colors.orangeAccent[700]
+          : colors.orangeAccent[700]
         }
         borderRadius="4px"
         >
@@ -67,7 +67,7 @@ const Team = () => {
           borderBottom: "none"
         },
         "& .name-column--cell": {
-          color: colors.greenAccent[300]
+          color: colors.orangeAccent[300]
         },
         "& .MuiDataGrid-columnHeaders": {
           backgroundColor: colors.blueAccent[700],

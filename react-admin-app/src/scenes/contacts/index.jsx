@@ -38,7 +38,7 @@ const Contacts = () => {
           borderBottom: "none"
         },
         "& .name-column--cell": {
-          color: colors.greenAccent[300]
+          color: colors.orangeAccent[300]
         },
         "& .MuiDataGrid-columnHeaders": {
           backgroundColor: colors.blueAccent[700],
