@@ -18,7 +18,7 @@ const Dashboard = () => {
   const colors = tokens(theme.palette.mode);
 
   return (
-    <Box m="20px" sx={{ maxHeight: "100vh", overflowY: "auto" }} >
+    <Box m="20px" sx={{ height: "100vh", overflowY: "auto" }} >
       {/* HEADER */}
       <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexDirection: { xs: "column", md: "row" } }}>
         <Header title="DASHBOARD" subtitle="Welcome to your dashboard" />

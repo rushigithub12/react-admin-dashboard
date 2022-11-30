@@ -11,8 +11,6 @@ const GeographyChart = ({ isDashboard = false }) => {
   const colors = tokens(theme.palette.mode);
   const size = useWindowSize();
 
-  console.log(size.width)
-
   return (
     <ResponsiveChoropleth
       data={data}
