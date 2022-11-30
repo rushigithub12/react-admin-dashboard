@@ -48,7 +48,7 @@ const FAQ = () => {
   const colors = tokens(theme.palette.mode);
 
   return (
-    <Box m="20px"  sx={{ overflowY: "scroll", height: { xs: "130vh", sm: "100vh" } }} >
+    <Box m="20px"  sx={{ overflowY: "scroll", height: { xs: "100vh", sm: "100vh" } }} >
       <Header title="FAQ" subtitle="Frequently Asked Questions Page" />
       {mockFaqData?.map((faq) => (
         <Accordion key={faq.id} defaultExpanded >
